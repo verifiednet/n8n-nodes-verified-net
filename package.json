@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-verified-net",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "n8n node for Verified.net: verify email addresses, validate phone numbers, live carrier and porting lookups, IP intelligence, contact verification and reverse lookups",
 	"license": "MIT",
 	"homepage": "https://verified.net/docs",
@@ -32,6 +32,9 @@
 	"files": [
 		"dist"
 	],
+	"publishConfig": {
+		"access": "public"
+	},
 	"n8n": {
 		"n8nNodesApiVersion": 1,
 		"strict": true,
