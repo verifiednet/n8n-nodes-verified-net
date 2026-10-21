@@ -1,0 +1,55 @@
+{
+	"name": "n8n-nodes-verified-net",
+	"version": "0.1.0",
+	"description": "n8n node for Verified.net: verify email addresses, validate phone numbers, live carrier and porting lookups, IP intelligence, contact verification and reverse lookups",
+	"license": "MIT",
+	"homepage": "https://verified.net/docs",
+	"keywords": [
+		"n8n-community-node-package",
+		"email verification",
+		"email validation",
+		"phone validation",
+		"carrier lookup",
+		"ip lookup"
+	],
+	"author": {
+		"name": "Verified.net",
+		"email": "support@verified.net"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/verifiednet/n8n-nodes-verified-net.git"
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/VerifiedNetApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/VerifiedNet/VerifiedNet.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "*",
+		"eslint": "9.39.4",
+		"prettier": "3.8.3",
+		"release-it": "20.2.0",
+		"typescript": "5.9.3"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}
